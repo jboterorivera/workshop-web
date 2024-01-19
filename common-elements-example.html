@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento de ejemplo HTML5</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {background-color: powderblue;}
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Encabezado nivel 1</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Sección 1</a></li>
+                <li><a href="#section2">Sección 2</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <section id="section1">
+                <h2>Encabezado nivel 2</h2>
+                <p>Esto es un párrafo.</p>
+                <figure>
+                    <img src="image.jpg" alt="Descripción de la imagen">
+                    <figcaption>Descripción de la imagen</figcaption>
+                </figure>
+                <video src="video.mp4" controls></video>
+                <audio src="audio.mp3" controls></audio>
+            </section>
+            <section id="section2">
+                <h2>Encabezado nivel 2</h2>
+                <ul>
+                    <li>Elemento de lista 1</li>
+                    <li>Elemento de lista 2</li>
+                </ul>
+                <ol>
+                    <li>Elemento de lista 1</li>
+                    <li>Elemento de lista 2</li>
+                </ol>
+                <table>
+                    <tr>
+                        <th>Encabezado 1</th>
+                        <th>Encabezado 2</th>
+                    </tr>
+                    <tr>
+                        <td>Celda 1</td>
+                        <td>Celda 2</td>
+                    </tr>
+                </table>
+                <form action="/submit_form" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                    <input type="submit" value="Submit">
+                </form>
+                <!-- Elementos de formulario -->
+                <form action="/submit_form" method="post">
+                    <textarea name="message" rows="10" cols="30">Escribe un mensaje aquí</textarea>
+                    <button type="submit">Enviar</button>
+                    <select name="options">
+                        <option value="option1">Opción 1</option>
+                        <option value="option2">Opción 2</option>
+                    </select>
+                </form>
+            </section>
+        </article>
+        <aside>
+            <h2>Encabezado nivel 2</h2>
+            <p>Esto es un contenido adicional.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>Este es el pie de página.</p>
+    </footer>
+    <script>
+        console.log('Este es un script inline');
+    </script>
+</body>
+</html>

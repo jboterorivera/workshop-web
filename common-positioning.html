@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div id="contenedor">
+        <div id="elemento1"></div>
+    </div>
+    <style>
+        /* Posicionamiento absoluto: El elemento se posiciona en relación a su contenedor más cercano */
+        #contenedor {
+            position: relative; /* Esto hace que el elemento hijo se posicione en relación a este contenedor */
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        #elemento1 {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+
+    <div id="elemento2"></div>
+    <style>
+        /* Posicionamiento relativo: El elemento se posiciona en relación a su posición normal */
+        #elemento2 {
+            position: relative;
+            left: 20px;
+            top: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+
+    <div id="elemento3"></div>
+    <style>
+        /* Posicionamiento fijo: El elemento se posiciona en relación a la ventana del navegador */
+        #elemento3 {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+
+    <div id="elemento4"></div>
+    <style>
+        /* Posicionamiento estático: Es el valor por defecto. Los elementos se posicionan en el orden en que aparecen en el flujo del documento */
+        #elemento4 {
+            position: static;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+
+    <div id="elemento5"></div>
+    <style>
+        /* Posicionamiento pegajoso (sticky): El elemento se posiciona en base a la posición del scroll del usuario */
+        #elemento5 {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: purple;
+        }
+    </style>
+
+    <div class="contenedor-flex">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        /* Flexbox: Permite ubicar elementos en un contenedor de manera flexible */
+        .contenedor-flex {
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .contenedor-flex > div {
+            flex: 1;
+            height: 100%;
+            margin: 10px;
+            background-color: orange;
+        }
+    </style>
+
+    <div class="contenedor-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        /* Grid: Permite ubicar elementos en un contenedor formando una cuadrícula */
+        .contenedor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .contenedor-grid > div {
+            background-color: teal;
+        }
+    </style>
+
+    <div id="elemento-transformado">Soy un elemento transformado</div>
+    <style>
+        /* Transformaciones CSS: Pueden mover, rotar, escalar y sesgar elementos */
+        #elemento-transformado {
+            transform: translate(50px, 100px) rotate(45deg) scale(1.5);
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    
+    <div id="elemento-margen-relleno">Soy un elemento con margen y relleno</div>
+    <style>
+        /* Margen y relleno (Margin and Padding): Pueden afectar la ubicación de un elemento al agregar espacio alrededor del contenido */
+        #elemento-margen-relleno {
+            margin: 50px;
+            padding: 50px;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <div id="elemento-alineado">Soy un elemento con texto alineado</div>
+    <style>
+        /* Alineación de texto (Text Align): Puede afectar la ubicación del texto dentro de un elemento */
+        #elemento-alineado {
+            text-align: right;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }        
+    </style>
+
+    <div id="elemento-flotante">Soy un elemento flotante</div>
+    <style>
+        /* Flotar (Float): Aunque su uso ha disminuido con la llegada de Flexbox y Grid, la propiedad float puede usarse para mover elementos a la izquierda o a la derecha dentro de su contenedor */
+        #elemento-flotante {
+            float: right;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <div id="multi-columna">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+    <style>
+        /* CSS Multi-column Layout: Permite dividir el contenido de un elemento en varias columnas, similar a cómo se estructuran los periódicos */
+        #multi-columna {
+            /* El contenido se dividirá en 3 columnas */
+            column-count: 3;
+            /* Espacio entre las columnas */
+            column-gap: 20px;
+            /* Línea divisoria entre las columnas */
+            column-rule: 1px solid black;
+        }
+    </style>
+
+
+    <div id="forma">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+    <style>
+        /* CSS Shapes: Permite que el flujo de texto se moldee alrededor de formas complejas, no solo rectángulos */
+        #forma {
+            /* El texto fluirá alrededor de un círculo */
+            shape-outside: circle(50%);
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+
+    <div id="modo-escritura">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+    <style>
+        /* CSS Writing Mode: Controla si las líneas de texto se apilan horizontal o verticalmente y en qué dirección */
+        #modo-escritura {
+        /* El texto se apilará verticalmente de arriba a abajo */
+            writing-mode: vertical-rl;
+        }
+    </style>
+
+    <div id="animacion">Soy un elemento animado</div>
+    <style>
+        /* Animaciones CSS: Permiten cambiar de un estilo a otro a lo largo del tiempo */
+        #animacion {
+            /* Define la animación */
+            animation-name: ejemplo;
+            animation-duration: 4s;
+        }
+    </style>
+    
+    <div id="transicion">Pasa el cursor sobre mí</div>
+    <style>
+        /* Transiciones CSS: Permiten un cambio suave de un estilo a otro al pasar el cursor sobre un elemento */
+        #transicion {
+            /* Define la transición */
+            transition: width 2s;
+            width: 100px;
+            background-color: red;
+            height: 100px;
+            display: inline-block;
+        }
+
+        #transicion:hover {
+            width: 300px;
+        }
+    </style>
+
+    <div id="filtro">Soy un elemento con filtro</div>
+    <style>
+        /* Filtros CSS: Permiten aplicar efectos gráficos a los elementos (como desenfoque, brillo, contraste, etc.) */
+        #filtro {
+            /* Aplica un filtro de desenfoque */
+            filter: blur(5px);
+        }
+    </style>
+
+    <div id="animacion-avanzada">Soy un elemento con animación avanzada</div>
+    <style>
+        #animacion-avanzada {
+            /* Define la animación */
+            animation-name: ejemplo-avanzado;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+
+        /* Define los estilos clave para la animación */
+        @keyframes ejemplo-avanzado {
+            0%   {background-color: red; left:0px; top:0px;}
+            25%  {background-color: yellow; left:200px; top:0px;}
+            50%  {background-color: blue; left:200px; top:200px;}
+            75%  {background-color: green; left:0px; top:200px;}
+            100% {background-color: red; left:0px; top:0px;}
+        }
+    </style>
+
+    <div id="transicion-avanzada">Pasa el cursor sobre mí</div>
+    <style>
+        #transicion-avanzada {
+            /* Define la transición */
+            transition-property: width, height;
+            transition-duration: 2s, 4s;
+            transition-timing-function: linear, ease-in;
+            transition-delay: 1s, 2s;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        #transicion-avanzada:hover {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <div id="filtro-avanzado">Soy un elemento con filtro avanzado</div>
+    <style>
+        #filtro-avanzado {
+            /* Aplica varios filtros */
+            filter: blur(5px) brightness(0.5) contrast(200%) drop-shadow(5px 5px 10px blue) grayscale(50%) hue-rotate(90deg) invert(75%) opacity(50%) saturate(200%) sepia(75%);
+        }
+    </style>
+</body>
+</html>
