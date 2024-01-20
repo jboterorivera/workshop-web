@@ -1,0 +1,277 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/*==================================================*/
+/* Technique 1*/
+.main_1 {
+    display: none;
+    border-color: blue;
+    border-style: solid;
+    position: relative; /*static is the default value for positioning*/
+    width: 50%;
+    height: 50%;
+    top: 60px;
+    left: 80px;
+}
+
+.main_1__positioning {
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+}
+/*==================================================*/
+/* Technique 2*/
+.main_2 {
+    display: none;
+    border-color: blue;
+    border-style: solid;
+    position: relative; /*static is the default value for positioning*/
+    width: 50%;
+    height: 50%;
+    top: 60px;
+    left: 80px;
+}
+
+.main_2__positioning {
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+/*==================================================*/
+/* Technique 3*/
+.main_3 {
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-color: blue;
+    border-style: solid;
+    position: relative; /*static is the default value for positioning*/
+    width: 50%;
+    height: 50%;
+    top: 60px;
+    left: 80px;
+}
+
+.main_3__positioning {
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 4*/
+.main_4 {
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    border-color: blue;
+    border-style: solid;
+    position: relative; /*static is the default value for positioning*/
+    width: 50%;
+    height: 50%;
+    top: 60px;
+    left: 80px;
+}
+
+.main_4__positioning {
+    align-self: center;
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 5*/
+.main_5 {
+    /* display: flex; */
+    display: none;
+    border-color: blue;
+    border-style: solid;
+    position: relative; /*static is the default value for positioning*/
+    width: 50%;
+    height: 50%;
+    top: 60px;
+    left: 80px;
+}
+
+.main_5__positioning {
+    margin: auto;
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 6*/
+.main_6 {
+    /* display: grid; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    height: 50%;
+}
+
+.main_6__positioning {
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 7*/
+.main_7 {
+    /* display: grid; */
+    display: none;
+    place-items: center;
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    height: 50%;
+}
+
+.main_7__positioning {
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 8*/
+.main_8 {
+    /* display: grid; */
+    display: none;
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    height: 50%;
+}
+
+.main_8__positioning {
+    align-self: center;
+    justify-self: center;
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 9*/
+.main_9 {
+    display: none;
+    /* display: grid; */
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    height: 50%;
+}
+
+.main_9__positioning {
+    place-self: center;
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
+
+/*==================================================*/
+/* Technique 10*/
+.main_10 {
+    display: none;
+    /* display: grid; */
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    height: 50%;
+    top: 10px;
+    left: 10px;
+}
+
+.main_10__positioning {
+    margin: auto;
+    border-color: black;
+    border-style: solid;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+}
