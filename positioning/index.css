@@ -3,3 +3,27 @@ body {
     font-size: 14px;
     font-weight: normal;
 }
+
+.main {
+    position: relative;
+}
+
+.article {
+    position: relative;
+    border: 5px solid blue;
+}
+
+.section {
+    position: relative;
+    border: 5px solid yellow;
+}
+
+.content {
+    position: relative;
+    border: 5px solid green;
+    z-index: -10;
+}
+
+.content p {
+    border: 5px solid red;
+}
