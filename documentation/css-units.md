@@ -13,7 +13,6 @@
 - ex: Relative to the x-height of the current font (rarely used)
 - ch: Relative to the width of the "0" (zero)
 - rem: Relative to font-size of the root element
-- %
 
 Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
 - vw: Relative to 1% of the width of the viewport
