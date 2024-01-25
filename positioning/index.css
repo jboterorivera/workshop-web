@@ -4,26 +4,84 @@ body {
     font-weight: normal;
 }
 
+/*
+position absolute is relative to the first parent with position relative
+if there is no parent with position relative then it is relative to the body
+Is not a good idea to use position absolute to position elements
+The width of the element is the width of the content
+sometimes a filter: wahtever, transform: whatever, perspective: whatever, could position the element inside the parent (weird behavior)
+*/
+
+/*
+position fixed, the width of the element is the width of the content but
+with top left and right to 0 fills the whole screen (or sets the width to 100%)
+Nice solution for a header fixed to the top or viewport and without changing the containing block (but there are other solutions like flexbox)
+Not recommended to use with regular content
+The content is not scrollable
+With position fixed, items scape from the containing block
+*/
+
+/*
+position sticky, the element is positioned based on the user's scroll position
+the content is scrollable
+the width is the full element of the containing block
+If for any reason sticky is not working, check if the parent has display flex, if so, you need to set the sticky element to align-self: start
+With position sticky, items not scape from the containing block
+*/
+
 .main {
-    position: relative;
+    margin: 50px;
 }
 
 .article {
-    position: relative;
-    border: 5px solid blue;
+    /* position: static; */
+}
+
+.header {
+    /*play with fixed or sticky here*/
+    /* position: sticky;
+    top: 0;
+    z-index: 1; */
+    /* width: 100%; */
+    /* position: fixed;
+    left: 0;
+    right: 0; */
+}
+
+.header-1 {
+    background-color: #46237A;
+    color: #fff;
 }
 
 .section {
-    position: relative;
-    border: 5px solid yellow;
+    position: static;
 }
 
-.content {
-    position: relative;
-    border: 5px solid green;
-    z-index: -10;
+.title {
+    height: 50px;
 }
 
-.content p {
-    border: 5px solid red;
+.title-1 {
+    background-color: #374B4A;
+    color: #fff;
+}
+
+.content-1 {
+    background-color: #8b8bae;
+    color: #fff;
+    position: static;
+}
+
+.content-2 {
+    margin-top: 10px;
+    background-color: #c5fffd;
+}
+
+.final-1 {
+    background-color: 526760;
+    color: #fff;
+}
+
+.final {
+    margin-top: 50px;
 }
